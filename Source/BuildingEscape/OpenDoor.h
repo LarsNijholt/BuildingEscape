@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "Engine.h"
 #include "Components/ActorComponent.h"
 #include "OpenDoor.generated.h"
 
@@ -15,6 +15,7 @@ class BUILDINGESCAPE_API UOpenDoor : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UOpenDoor();
+	void OpenDoor(float DeltaTime);
 
 protected:
 	// Called when the game starts
@@ -26,6 +27,15 @@ public:
 
 
 private:
-	float TargetYaw = 0.f;
-		
+	UPROPERTY(EditAnywhere)
+		float TargetYaw;
+
+	float InitialYaw;
+	float CurrentYaw;
+
+	UPROPERTY(EditAnywhere)
+		ATriggerVolume* PressurePlate;
+
+	UPROPERTY(EditAnywhere)
+		AActor* ActorThatOpens;
 };
