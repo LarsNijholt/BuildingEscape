@@ -26,6 +26,6 @@ public:
 
 
 private:
-	float TargetYaw = 90.f;
+	float TargetYaw = 0.f;
 		
 };
