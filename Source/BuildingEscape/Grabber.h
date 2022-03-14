@@ -34,4 +34,10 @@ private:
 	void FindPhysicsHandle();
 	void SetupInputComponent();
 	FHitResult Raycast();
+
+	// Return the Line Trace End
+	FVector GetPlayersReach() const;
+
+	//Get Players Position in World
+	FVector GetPlayerWorldPosition() const;
 };
