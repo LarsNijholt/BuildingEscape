@@ -60,7 +60,6 @@ void UOpenDoor::OpenDoor(float DeltaTime)
 	CloseDoorSound = true;
 	if (OpenDoorSound)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("shot"));
 		AudioComponent->Play();
 		OpenDoorSound = false;
 	}
@@ -71,7 +70,6 @@ void UOpenDoor::CloseDoor(float DeltaTime)
 	OpenDoorSound = true;
 	if (CloseDoorSound)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("shot2"));
 		AudioComponent->Play();
 		CloseDoorSound = false;
 	}
